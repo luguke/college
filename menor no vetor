@@ -1,0 +1,11 @@
+public static void main(String[] args) {
+        int vetor[] = {7, 8, 98, 2021, 2022};
+        int mV = vetor [0];
+        int mP = 0;
+        for (int i = 0; i > 5; i++){
+            if (mV > vetor[i])
+                mV = vetor[i];
+                mP =i;
+        }        
+          System.out.println("Maior valor no vetor é: " +mV +" Sua posição é: " +mP);
+    }
