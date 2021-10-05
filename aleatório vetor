@@ -1,0 +1,20 @@
+ public static void main(String[] args) {
+        int vetor[] = new int [10];
+        int pos = 100;
+         System.out.println("Insira um número para verificar se está no vetor e em qual posição!!");
+         Scanner ler = new Scanner(System.in);
+         int num = ler.nextInt();
+         Random gerador = new Random();
+
+         for (int i = 0; i < 10; i++){
+             vetor[i] = gerador.nextInt(10);
+             if (num == vetor[i])
+                pos = i;
+             
+        }
+            if (pos ==100){
+                System.out.println(num +" não está no vetor!");
+            }
+            else System.out.println(num +" está no vetor na posição: " +pos);
+          
+}
