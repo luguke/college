@@ -1,0 +1,161 @@
+import java.util.Scanner;
+/**
+ *
+ */
+
+
+public class CalculadoraV2 {
+
+    
+    public static void main(String[] args) {
+        
+        Scanner entry = new Scanner(System.in);
+        
+        System.out.println("Informe a base de entrada: decimal, hexadecimal, octal ou binário");
+        String entrada = entry.nextLine();
+        
+        System.out.println("Informe a base de saida: decimal, binario, hexadecimal ou octal");
+        String saida = entry.nextLine();
+        
+        System.out.println("--------------------------------------------");
+        //identifica a base de entrada
+        switch(entrada){
+            
+            //CASE DECIMAL
+            case "decimal":
+                
+                //onde e feito a declaracao do valor
+                System.out.println("Digite o valor a ser convertido");
+                int valorDec = entry.nextInt();
+                
+                switch(saida){
+                    //decimal para decimal
+                    case"decimal":
+                        System.out.println("o valor é:"+valorDec);
+                        break;
+                        
+                    //decimal para binário    
+                    case"binario":
+                        String decBin = Integer.toBinaryString(valorDec);
+                        System.out.println("o valor é:"+decBin);
+                        break;
+                        
+                    //decimal para hexadecimal
+                    case"hexadecimal":
+                        String decHex = Integer.toHexString(valorDec);
+                        System.out.println("O valor é:"+decHex);
+                        break;
+                        
+                    //decimal para octal
+                    case"octal":
+                        String decOct = Integer.toOctalString(valorDec);
+                        System.out.println("O valor é:"+decOct);
+                        break;
+                }
+                break;
+                
+            //CASE BINARIO    
+            case"binario":
+                
+                System.out.println("Digite o valor a ser convertido");
+                String valorBi=entry.nextLine();
+                
+                switch(saida){
+                    //binario para binario
+                    case"binario":
+                        System.out.println("O valor é:"+valorBi);
+                        break;
+                        
+                    //binario para decimal
+                    case"decimal":
+                         int binDec = Integer.parseInt(valorBi, 2);
+                         System.out.println("O valor é:"+binDec);
+                        break;
+                        
+                    //binario para hexadecimal
+                    case"hexadecimal":
+                        String binHex = Integer.toString(Integer.parseInt(valorBi, 2), 16);
+                        System.out.println("O valor é:"+binHex);
+                        break;
+                        
+                    //binario para octal
+                    case"octal":
+                        String binOct = Integer.toString(Integer.parseInt(valorBi, 2), 8);
+                        System.out.println("O valor é:"+binOct);
+                        break;
+                }
+                break;   
+                
+            //CASE OCTAL    
+            case "octal":
+                
+               
+                System.out.println("Digite o valor a ser convertido");
+                String valorOct=entry.nextLine();
+                
+                switch(saida){
+                    //octal para octal
+                    case "octal":
+                        System.out.println("O valor é:"+valorOct);
+                        break;
+                        
+                    //octal para decimal    
+                    case "decimal":
+                        String octDec = Integer.toString(Integer.parseInt(valorOct, 8), 10);
+                        System.out.println("O valor é:"+octDec);
+                        break;
+                        
+                    //octal para binario    
+                    case"binario":
+                        String octBin = Integer.toString(Integer.parseInt(valorOct, 8), 2);
+                        System.out.println("O valor é:"+octBin);
+                        break;
+                        
+                    //octal para hexadecimal    
+                    case "hexadecimal":
+                        String octHex = Integer.toString(Integer.parseInt(valorOct, 8), 16);
+                        System.out.println("O valor é:"+octHex);
+                        break;
+                }
+                break;
+                
+            //CASE HEXADECIMAL    
+            case"hexadecimal":
+                
+                System.out.println("Digite o valor a ser convertido");
+                String valorHex=entry.nextLine();
+                
+                 switch(saida){
+                     
+                    //hexadecimal para hexadecimal
+                    case"hexadecimal":
+                        System.out.println("O valor é:"+valorHex);
+                        break;
+                        
+                    //hexadecimal para decimal    
+                    case"decimal":
+                        String hexDec = Integer.toString(Integer.parseInt(valorHex, 16), 10);
+                        System.out.println("O valor é:"+hexDec);
+                         break;
+                         
+                    //hexadecimal para binario     
+                    case"binario":
+                        String hexBin = Integer.toString(Integer.parseInt(valorHex, 16), 2);
+                        System.out.println("O valor é:"+hexBin);
+                         break;
+                         
+                    //hexadecimal para octal     
+                    case"octal":
+                        String hexOct = Integer.toString(Integer.parseInt(valorHex, 16), 8);
+                        System.out.println("O valor é:"+hexOct);
+                         break;
+                 }
+                 break;
+                 
+        default:
+        System.out.println("opção inválida.");
+        }
+        
+    }
+    
+}
