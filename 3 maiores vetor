@@ -1,0 +1,27 @@
+public static void main(String[] args) {
+        int vetor[] = {7, 8, 98, 2021, 2022};
+        int mV = vetor [0];
+        int mV2 = vetor [0];
+        int mV3 = vetor [0];
+        int mP = 0;
+        int mP2 = 0;
+        int mP3 = 0;
+        for (int i = 0; i < 5; i++){
+            if (mV < vetor[i])
+                mV = vetor[i];
+                mP = i;
+        }
+        for (int i = 0; i < 4; i++){
+            if (mV > mV2)
+                mV2 = vetor[i];
+                mP2 = i;
+        }
+        for (int i = 0; i < 3; i++){
+            if (mV2 > mV3)
+                mV3 = vetor[i];
+                mP3 = i;
+        }
+          System.out.println("Maior valor no vetor é: " +mV +" e sua posição é: " +mP);
+          System.out.println("O segundo maior valor no vetor é: " +mV2 +" e sua posição é: " +mP2);
+          System.out.println("O terceiro maior valor no vetor é: " +mV3 +" e sua posição é: " +mP3);
+        }
